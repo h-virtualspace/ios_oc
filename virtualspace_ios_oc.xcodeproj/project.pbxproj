@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04923F9C1B860E2100B1BFF6 /* InitSql.m in Sources */ = {isa = PBXBuildFile; fileRef = 04923F9B1B860E2100B1BFF6 /* InitSql.m */; };
+		04D7E4B51B9B2877007B615E /* ImageTransController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7E4B31B9B2877007B615E /* ImageTransController.m */; };
+		04D7E4B61B9B2877007B615E /* ImageTransController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D7E4B41B9B2877007B615E /* ImageTransController.xib */; };
 		04D84EA51B82030F00C1E862 /* FMDatabase+FTS3.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E8C1B82030F00C1E862 /* FMDatabase+FTS3.m */; };
 		04D84EA61B82030F00C1E862 /* FMTokenizers.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E8E1B82030F00C1E862 /* FMTokenizers.m */; };
 		04D84EA71B82030F00C1E862 /* FMDatabase+InMemoryOnDiskIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D84E921B82030F00C1E862 /* FMDatabase+InMemoryOnDiskIO.m */; };
@@ -54,6 +56,9 @@
 		04923F9B1B860E2100B1BFF6 /* InitSql.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitSql.m; sourceTree = "<group>"; };
 		04CE69D61B7243DC00EDCF68 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		04CE69D71B7243DC00EDCF68 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		04D7E4B21B9B2877007B615E /* ImageTransController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTransController.h; sourceTree = "<group>"; };
+		04D7E4B31B9B2877007B615E /* ImageTransController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTransController.m; sourceTree = "<group>"; };
+		04D7E4B41B9B2877007B615E /* ImageTransController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTransController.xib; sourceTree = "<group>"; };
 		04D84E8B1B82030F00C1E862 /* FMDatabase+FTS3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabase+FTS3.h"; sourceTree = "<group>"; };
 		04D84E8C1B82030F00C1E862 /* FMDatabase+FTS3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabase+FTS3.m"; sourceTree = "<group>"; };
 		04D84E8D1B82030F00C1E862 /* FMTokenizers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTokenizers.h; sourceTree = "<group>"; };
@@ -252,6 +257,9 @@
 				04DAFA5F1B80BB5400C882CF /* StoryWebviewPlugin.m */,
 				04DAFA631B80BDA400C882CF /* StoryImgPickerViewCtrl.h */,
 				04DAFA641B80BDA400C882CF /* StoryImgPickerViewCtrl.m */,
+				04D7E4B21B9B2877007B615E /* ImageTransController.h */,
+				04D7E4B31B9B2877007B615E /* ImageTransController.m */,
+				04D7E4B41B9B2877007B615E /* ImageTransController.xib */,
 			);
 			path = edit;
 			sourceTree = "<group>";
@@ -416,6 +424,7 @@
 			files = (
 				04DDE06A1B68FE5100E708DB /* Main.storyboard in Resources */,
 				04DDE06F1B68FE5100E708DB /* LaunchScreen.xib in Resources */,
+				04D7E4B61B9B2877007B615E /* ImageTransController.xib in Resources */,
 				04DDE06C1B68FE5100E708DB /* Images.xcassets in Resources */,
 				04DAFA441B80B9EF00C882CF /* test.jpg in Resources */,
 			);
@@ -445,6 +454,7 @@
 				04DAFA561B80BB3900C882CF /* WebNativeApi.m in Sources */,
 				04DAFA601B80BB5400C882CF /* HStoryEditorView.m in Sources */,
 				04D84EA71B82030F00C1E862 /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
+				04D7E4B51B9B2877007B615E /* ImageTransController.m in Sources */,
 				04D84EAE1B82030F00C1E862 /* FMResultSet.m in Sources */,
 				04DDE0671B68FE5100E708DB /* ViewController.m in Sources */,
 				04DAFA621B80BB5400C882CF /* StoryWebviewPlugin.m in Sources */,

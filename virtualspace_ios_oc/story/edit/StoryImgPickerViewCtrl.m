@@ -8,11 +8,13 @@
 
 #import "StoryImgPickerViewCtrl.h"
 #import "StoryDao.h"
+#import "ImageTransController.h"
 @interface StoryImgPickerViewCtrl ()
 
 @end
 
-@implementation StoryImgPickerViewCtrl
+@implementation StoryImgPickerViewCtrl{
+}
 
 + (StoryImgPickerViewCtrl *) initWithDefault{
     StoryImgPickerViewCtrl *viewCtrl = [[super alloc] init];
@@ -26,7 +28,8 @@
     return viewCtrl;
 }
 - (void)show :(UIViewController *) parent{
-    [parent presentViewController:self animated:YES completion:^{}];
+    [self showImageTransformView];
+    //[parent presentViewController:self animated:YES completion:^{}];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,17 +41,27 @@
 }
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo NS_DEPRECATED_IOS(2_0, 3_0){
 }
+- (void)showImageTransformView {
+    ImageTransController *viewController=[[ImageTransController alloc] initWithNibName:@"ImageTransController" bundle:nil];
+    
+    UIViewController *rootViewCtrl=[[UIApplication sharedApplication] keyWindow].rootViewController;
+    
+    [rootViewCtrl presentViewController:viewController animated:YES completion:nil];
+}
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     [self dismissViewControllerAnimated:YES completion:^{
-        
+       
     }];
-    UIImage *uiImage=[info objectForKey:UIImagePickerControllerOriginalImage];
-    NSData *imgData=UIImagePNGRepresentation(uiImage);
+//    UIImage *uiImage=[info objectForKey:UIImagePickerControllerOriginalImage];
+//    NSData *imgData=UIImagePNGRepresentation(uiImage);
+//    
+//    StoryDao *dao=[StoryDao sharedStoryDao];
+//    NSString *imageId=[dao saveStoryImageData:imgData];
+//    NSString *script=[NSString stringWithFormat:@"HJsApp.callListener('insertImage','%@')",imageId];
+//    [self.webview executeScript:script];
     
-    StoryDao *dao=[StoryDao sharedStoryDao];
-    NSString *imageId=[dao saveStoryImageData:imgData];
-    NSString *script=[NSString stringWithFormat:@"HJsApp.callListener('insertImage','%@')",imageId];
-    [self.webview executeScript:script];
+    
+    
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
     [self dismissViewControllerAnimated:YES completion:^{
